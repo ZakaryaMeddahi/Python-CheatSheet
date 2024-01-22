@@ -150,7 +150,7 @@ a.pop()         # Removes the last item
 a.clear()       # Removes all the elements from the set
 ```
 
-_Note:_
+**_Note:_**
 
 - The elements in a set must be of the same data type.
 - Sets are unordered, so the items will appear in a random order.
@@ -159,15 +159,125 @@ _Note:_
 #### Dictionaries
 
 ```python
-a = {1: "John", 2: 36}
-a = {True: "John", False: 36}
-a = {"name": "John", "age": 36}
+a = {1: "Mohamed", 2: 36}
+a = {True: "Mohamed", False: 36}
+a = {"name": "Mohamed", "age": 36}
 # Accessing
-a["name"] # John
-a.get("name") # John
+a["name"] # Mohamed
+a.get("name") # Mohamed
 # Functions and Methods
-print(len(a))   # Returns the number of items in a dictionary.
-a["name"] = "Jane" # Changes the value of a specified key
-a["address"] = "Doe" # Adds a new key-value pair
-a.pop("name")   # Removes the element with the specified key
+print(len(a))            # Returns the number of items in a dictionary.
+a["name"] = "Mohamed"    # Changes the value of a specified key
+a["address"] = "ALgeria" # Adds a new key-value pair
+a.pop("name")            # Removes the element with the specified key
+```
+
+## Operators
+
+#### Arithmetic Operators
+
+| Operator | Description    | Example  |
+| -------- | -------------- | -------- |
+| `+`      | Addition       | `x + y`  |
+| `-`      | Subtraction    | `x - y`  |
+| `*`      | Multiplication | `x * y`  |
+| `/`      | Division       | `x / y`  |
+| `%`      | Modulus        | `x % y`  |
+| `**`     | Exponentiation | `x ** y` |
+| `//`     | Floor division | `x // y` |
+
+```python
+# Difference between division and floor division
+print(5 / 2) # 2.5
+print(5 // 2) # 2
+```
+
+#### Comparison operators
+
+| Operator | Description              | Example  |
+| -------- | ------------------------ | -------- |
+| `==`     | Equal                    | `x == y` |
+| `!=`     | Not equal                | `x != y` |
+| `>`      | Greater than             | `x > y`  |
+| `<`      | Less than                | `x < y`  |
+| `>=`     | Greater than or equal to | `x >= y` |
+| `<=`     | Less than or equal to    | `x <= y` |
+
+#### Bitwise Operators
+
+| Operator | Description          | Example  |
+| -------- | -------------------- | -------- |
+| `&`      | AND                  | `x & y`  |
+| `\|`     | OR                   | `x \| y` |
+| `^`      | XOR                  | `x ^ y`  |
+| `~`      | NOT                  | `~x`     |
+| `<<`     | Zero fill left shift | `x << y` |
+| `>>`     | Signed right shift   | `x >> y` |
+
+```python
+# Example
+x = 5 # 0b0101 in binary
+y = 3 # 0b0011 in binary
+print(x & y)  # 1 (0b0001 in binary)
+print(x | y)  # 7 (0b0111 in binary)
+print(x ^ y)  # 6 (0b0110 in binary)
+print(~x)     # -6 (in two's complement form)
+# Those Two Are The Most Useful
+print(x << 1) # 10 (0b1010 in binary)
+print(x >> 1) # 2 (0b0010 in binary)
+```
+
+#### Assignment Operators
+
+| Operator | Description                    | Example   |
+| -------- | ------------------------------ | --------- |
+| `=`      | Assign                         | `x = 5`   |
+| `+=`     | Add and assign                 | `x += 5`  |
+| `-=`     | Subtract and assign            | `x -= 5`  |
+| `*=`     | Multiply and assign            | `x *= 5`  |
+| `/=`     | Divide and assign              | `x /= 5`  |
+| `%=`     | Modulus and assign             | `x %= 5`  |
+| `**=`    | Exponentiation and assign      | `x **= 5` |
+| `//=`    | Floor division and assign      | `x //= 5` |
+| `&=`     | Bitwise AND and assign         | `x &= 5`  |
+| `\|=`    | Bitwise OR and assign          | `x \|= 5` |
+| `^=`     | Bitwise XOR and assign         | `x ^= 5`  |
+| `>>=`    | Bitwise right shift and assign | `x >>= 5` |
+| `<<=`    | Bitwise left shift and assign  | `x <<= 5` |
+
+#### Logical Operators
+
+| Operator | Description                                             | Example                 |
+| -------- | ------------------------------------------------------- | ----------------------- |
+| `and`    | Returns True if both statements are true                | `x < 5 and  x < 10`     |
+| `or`     | Returns True if one of the statements is true           | `x < 5 or x < 4`        |
+| `not`    | Reverse the result, returns False if the result is true | `not(x < 5 and x < 10)` |
+
+#### Identity Operators
+
+| Operator | Description                                            | Example      |
+| -------- | ------------------------------------------------------ | ------------ |
+| `is`     | Returns True if both variables are the same object     | `x is y`     |
+| `is not` | Returns True if both variables are not the same object | `x is not y` |
+
+```python
+# Example
+x = ["apple", "banana"]
+z = x
+print(x is z) # True
+print(x is not z) # False
+```
+
+#### Membership Operators
+
+| Operator | Description                                                                      | Example      |
+| -------- | -------------------------------------------------------------------------------- | ------------ |
+| `in`     | Returns True if a sequence with the specified value is present in the object     | ` x in y`    |
+| `not in` | Returns True if a sequence with the specified value is not present in the object | `x not in y` |
+
+```python
+# Example
+x = ["apple", "banana"]
+print("banana" in x) # True
+print("banana" not in x) # False
 ```
