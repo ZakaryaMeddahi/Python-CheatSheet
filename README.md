@@ -17,14 +17,15 @@
       - [Dictionaries](#dictionaries)
     - [Operators](#operators)
       - [Arithmetic Operators](#arithmetic-operators)
-      - [Assignment Operators](#assignment-operators)
       - [Comparison Operators](#comparison-operators)
+      - [Bitwise Operators](#bitwise-operators)
+      - [Assignment Operators](#assignment-operators)
       - [Logical Operators](#logical-operators)
       - [Identity Operators](#identity-operators)
       - [Membership Operators](#membership-operators)
-      - [Bitwise Operators](#bitwise-operators)
     - [Control Flow](#control-flow)
       - [If-Else](#if-else)
+      - [Ternary-Operator](#ternary-operator)
       - [For Loop](#for-loop)
       - [While Loop](#while-loop)
       - [Break and Continue](#break-and-continue)
@@ -52,7 +53,9 @@ input("Enter your name: ")
 #### Output
 
 ```python
-print("Hello World!")
+print("Hello World!") # Hello World!
+# Using sep
+print("Hello", "World!", sep="#") # Hello#World!
 ```
 
 ## Data Types
@@ -280,4 +283,93 @@ print(x is not z) # False
 x = ["apple", "banana"]
 print("banana" in x) # True
 print("banana" not in x) # False
+```
+
+## Control Flow
+
+- Conditional execution: If a condition is met then execute statement. Otherwise skip it.
+- Looping: Execute statement multiple times.
+
+#### If Statement
+
+```python
+if condition:
+    # statement 1
+elif condition:
+    # statement 2
+else:
+    # statement 3
+
+# Example
+a = 5
+if a > 5:
+    print("Greater than 5")
+elif a < 5:
+    print("Less than 5")
+else:
+    print("Equal to 5")
+
+# Equal to 5
+```
+
+#### Ternary-Operator
+
+```python
+value_if_true if condition else value_if_false
+# Example
+a = True
+num1 = 5
+num2 = 1
+print("Hello World!") if a else print("Bye World!") # Hello World!
+print(num1) if num1 > num2 else print(num2) # 5
+```
+
+#### For Loop
+
+```python
+for item in iterable:
+    # statement
+
+# Example
+list = [2, 6, 4, 5]
+for i in list:
+    print(i)
+# 2
+# 6
+# 4
+# 5
+```
+
+#### While Loop
+
+```python
+while condition:
+    # statement
+
+# Example
+i = 1
+sum = 0
+while i < 3:
+    sum = i
+    i += 1
+print(sum) # 3
+```
+
+#### Break and Continue
+
+```python
+for item in iterable:
+    if condition:
+        break # Breaks out of the loop
+    if condition:
+        continue # Skips this iteration of the loop
+
+# Example
+list = [2, 6, 4, 5]
+for i in list:
+    if i == 6:
+        break
+    print(i)
+# 2
+# 6
 ```
