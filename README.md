@@ -373,3 +373,49 @@ for i in list:
 # 2
 # 6
 ```
+
+<!-- #### Pass
+
+```python
+# Example
+for item in iterable:
+    pass # Does nothing
+``` -->
+
+## Functions
+
+- A function is a reusable piece of code that performs a specific task. It can be
+  called from anywhere in a program.
+
+#### Function Definition
+
+```python
+def function_name(parameters):
+    # statement
+```
+
+#### Function Call
+
+```python
+function_name(arguments)
+```
+
+#### Arguments
+
+- These are values passed into functions when they're called. They represent the data used by
+  the function to perform its task.
+
+#### Return
+
+- A function can return a value to the caller using the return statement.
+
+```python
+def function_name(parameters):
+    # statement
+    return value
+
+# Example
+def add(a, b):
+    return a + b
+print(add(1, 2)) # 3
+```
