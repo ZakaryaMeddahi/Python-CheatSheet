@@ -11,6 +11,7 @@
       - [Numbers](#numbers)
       - [Strings](#strings)
       - [Booleans](#booleans)
+      - [Explicit Conversion](#explicit-conversion)
       - [Lists](#lists)
       - [Tuples](#tuples)
       - [Sets](#sets)
@@ -97,6 +98,39 @@ a = ' '.join(["Hello", "World!"]) # Turns list into string by using separator be
 print(a) # Hello World!
 ```
 
+#### Explicit Conversion
+
+_To Integer Conversion_
+
+```python
+a = int(1)      # 1
+a = int(2.8)    # 2
+a = int("3")    # 3
+a = int(True)   # 1
+a = int(False)  # 0
+```
+
+_To Float Conversion_
+
+```python
+a = float(1)    # 1.0
+a = float(2.8)  # 2.8
+a = float("3")  # 3.0
+a = float("4.2") # 4.2
+a = float(True) # 1.0
+a = float(False) # 0.0
+```
+
+_To String Conversion_
+
+```python
+a = str("s1")   # 's1'
+a = str(2)      # '2'
+a = str(3.0)    # '3.0'
+a = str(True)   # 'True'
+a = str(False)  # 'False'
+```
+
 #### Lists
 
 ```python
@@ -121,13 +155,42 @@ a.sort()        # Sorts the list
 a.reverse()     # Reverses the order of the list
 ```
 
+List Comprehensions
+
+```python
+a = [expression for i in iterable]
+```
+
+Examples:
+
+```python
+a = [x for x in range(5)] # [1, 2, 3, 4, 5]
+squares = [x**2 for x in range(5)] # [1, 4, 9, 16]
+```
+
 #### Tuples
 
 ```python
+# Parentheses are optional
 a = ("apple", "banana", "cherry")
+a = "apple", "banana", "cherry"
 a = (1, 2, 3)
+a = 1, 2, 3
 a = (True, False, True)
+a = True, False, True
 a = (1, "Hello World!", True)
+a = 1, "Hello World!", True
+
+# Tuple unpacking
+a, b, c = 1, 2, 3
+print(a) # 1
+print(b) # 2
+print(c) # 3
+
+# Swap variables values using tuple unpacking
+a, b = b, a
+print(a) # 2
+print(b) # 1
 
 # Functions and Methods
 print(len(a))   # Returns the number of items in a tuple.
@@ -140,7 +203,7 @@ a.clear()       # Removes all the elements from the tuple
 _Note:_
 
 - In Python tuples are immutable while lists are mutable.
-- _mutability of lists_ means we can modify the list after creation in the other hand _immutability of tuples_ means we can't change the tuple after creation
+- _mutability of lists_ means we can modify the list after creation, in the other hand _immutability of tuples_ means we can't change the tuple after creation
 
 #### Sets
 
@@ -148,6 +211,14 @@ _Note:_
 a = {"apple", "banana", "cherry"}
 a = {1, 2, 3}
 a = {True, False, True}
+
+# Mathematical operators on set
+a = {1, 2, 3}
+b = {2, 3, 4}
+print(a | b) # {1, 2, 3, 4} Union
+print(a & b) # {2, 3} Intersection
+print(a - b) # {1} Difference
+print(a ^ b) # {1, 4} Symmetric Difference
 
 # Functions and Methods
 print(len(a))   # Returns the number of items in a set.
@@ -515,8 +586,7 @@ object_name = ClassName()
 
 #### Class Attributes And Methods
 
-A class can have attributes which store information about instances of the class, and methods which perform actions
-using that data.
+A class can have attributes which store information about instances of the class, and methods which perform actions using that data.
 
 ```python
 class ClassName:
@@ -559,14 +629,14 @@ print(person.age) # 36
 
 #### Class Inheritance
 
-A subclass (child class) inherits the attributes and methods from its parent or superclass. It can also add new
-attributes and methods or override existing ones.
+A subclass (child class) inherits the attributes and methods from its parent or superclass. It can also add new attributes and methods or override existing ones.
 
 ```python
 class ClassName:
-  # statement
+  # Attributes and Methods
+
 class SubClassName(ClassName):
-  # statement
+  # Attributes and Methods
 ```
 
 Example:
